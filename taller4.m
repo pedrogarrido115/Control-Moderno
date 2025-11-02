@@ -7,7 +7,7 @@ Cap = 220e-6;
 %Matrices
 A = [-R/L -1/L; 1/Cap 0];
 B = [1/L; 0];
-C = [0 1;1 0];
+C = [0 1;1 0]; %Salida 1: v_C(t), Salida 2: i(t)
 D = [0;0];
 
 sys = ss(A,B,C,D); %Espacio de estados
@@ -86,4 +86,5 @@ subplot(1,2,2); %Corriente
 plot(t2,y2(2,:))
 xlabel('Tiempo [s]'); ylabel('I [A]');
 grid on;
+
 
